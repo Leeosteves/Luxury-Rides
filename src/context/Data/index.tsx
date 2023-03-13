@@ -1,4 +1,5 @@
 import { useEffect, useState, createContext } from "react";
+import { Data, Model } from "~/@types/data";
 import api from "~/utils/api";
 import { DataContextProps } from "./types";
 
@@ -10,15 +11,15 @@ const DataProvider = ({ children }: any) => {
   /**
    * States
    */
-  const [data, setData] = useState([]);
+  const [models, setModels] = useState<Model>();
 
-  /**
+  /**s
    * Callbacks
    */
 
   const getCars = async () => {
-    const { data }: DataContextProps = await api.get("cars.json");
-    setData(data);
+    const { data }: Data = await api.get("cars.json");
+    setModels(data.models);
   };
 
   /**
@@ -30,9 +31,7 @@ const DataProvider = ({ children }: any) => {
   }, []);
 
   return (
-    <DataContext.Provider value={{ data, setData }}>
-      {children}
-    </DataContext.Provider>
+    <DataContext.Provider value={{ models }}>{children}</DataContext.Provider>
   );
 };
 export default DataProvider;

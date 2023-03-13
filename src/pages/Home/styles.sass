@@ -3,4 +3,19 @@
 .home
     display: flex
     flex-direction: column
-    height: 2000px
+    align-items: center
+    max-width: 1600px
+    margin: 0 auto
+    position: relative
+    height: auto
+    overflow: hidden
+    &-filter
+        width: 100vw
+        height: 100px
+        background-color: $black
+        position: absolute
+    &-map
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: 20px

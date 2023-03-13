@@ -1,0 +1,37 @@
+// Custom Variables
+$gray-500: #575655;
+$gray-900: #1d1e1d;
+$bronze: #a48e71;
+$white-landing: #e3e3dd;
+$button: #a37e51;
+$black: #000000;
+$white: #FFFFFF;
+$gray-light: #D3D3D3;
+$gray-dark: #1C1C1C;
+$silver: #C0C0C0;
+$blue-dark: #0B243B;
+$green-esmerald: #50C878;
+$red-rubi: #E0115F;
+
+// Typography
+
+
+// Spacing 
+
+$spacing: (
+x-small: 8px, 
+small: 12px,
+medium: 16px,
+large: 24px,
+x-large: 32px,
+xx-large: 48px,) !default;
+
+// Borders
+
+$borders: (
+xs: 4px, 
+sma: 8px,
+md: 16px,
+lg: 32px,
+xl: 50%,
+) !default;

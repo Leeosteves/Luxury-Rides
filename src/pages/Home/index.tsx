@@ -1,15 +1,30 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import Card from "~/components/Card";
 import "~/pages/Home/styles.sass";
-import api from "~/utils/api";
-import { Cars } from "~/@types/cars";
-import useData from "~/hooks/useData";
+import useModel from "~/hooks/useModel";
+import { Carousel } from "~/components/Carousel";
 
 const Home = () => {
-  const { data } = useData();
+  const { selectModel } = useModel();
+  const limite = selectModel("sport")?.slice(0, 12);
+  console.log(limite);
 
+  const CarsSell = limite?.map((car, index) => {
+    const isFourthItem = (index + 1) % 4 === 0;
+    const itemComponent = (
+      <div key={car?.id}>
+        <Card car={car} />
+      </div>
+    );
+    return itemComponent;
+  });
   return (
     <div className="home">
-      <p>{data?.models?.sport[0]?.engine}</p>
+      <div className="home-filter">
+        <span className="lambo">lambo</span>
+      </div>
+      <Carousel />
+      <h2>Cars</h2>
+      <div className="home-map">{CarsSell}</div>
     </div>
   );
 };

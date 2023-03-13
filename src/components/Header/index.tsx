@@ -16,7 +16,6 @@ export const Header = () => {
           <a href="#cars">Cars</a>
           <a href="#about">About Us</a>
           <a href="#contact">Contact</a>
-          <a href="#cart">Shopping Cart</a>
         </ul>
       </nav>
       <form className="header-form">

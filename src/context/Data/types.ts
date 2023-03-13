@@ -1,5 +1,5 @@
-import { Cars } from "~/@types/cars";
+import { Model } from "~/@types/data";
 
 export interface DataContextProps {
-  data: Cars;
+  models: Model | undefined;
 }
