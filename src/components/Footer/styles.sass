@@ -1,0 +1,33 @@
+@import "../../sass/sass-utils/_variables"
+@import "../../sass/sass-utils/_mixins"
+
+.footer
+    @include Row(space-between, center)
+    background-color: $white
+    border-top-style: inset
+    border-width: 1px
+    min-height: 80px
+    padding: 0 20px
+    color: $bronze
+    &-copyright
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-name
+            font-family: "Kaushan Script"
+            &:hover
+                color: black
+    &-nav
+        a
+            padding: 0 10px
+            &:hover
+                color: black
+    &-social
+        i
+            padding: 0 10px
+        .twitter:hover
+            color: cyan
+        .instagram:hover
+            color: pink
+        .facebook:hover
+            color: blue
